@@ -10,12 +10,37 @@ module UART_rx(
 
 // intermediate signals
 logic start, shift, receiving;
+logic [3:0] bit_cnt;
+logic [12:0] baud_cnt;
 
 // block 1
 always_ff @(posedge clk, negedge rst_n) begin
-    
+    if (!rst_n)
+        bit_cnt <= '0;
+    else if (start)
+        bit_cnt <= '0;
+    else if (shift)
+        bit_cnt <= bit_cnt + 1'b1;
+    // else hold
 end
 
+// block 2
+always_ff @(posedge clk, negedge rst_n) begin
+    if (!rst_n)
+        baud_cnt <= '0;
+    else if (start|shift)
+        // TODO: some logic with start signal
+    else if (receiving)
+        baud_cnt <= baud_cnt - 1'b1;
+    // else hold
+end
+
+// block 3
+always_ff @(posedge clk, negedge rst_n) begin
+    if (!rst_n)
+        rx_data <= '0;
+    else if ()
+end
 
 
 
