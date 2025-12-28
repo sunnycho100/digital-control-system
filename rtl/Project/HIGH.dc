@@ -1,0 +1,145 @@
+# ====================================================================
+# Segway.dc  -- Synopsys DC script for Segway top-level
+# ====================================================================
+
+
+# -----------------------------
+# Read / elaborate RTL
+# -----------------------------
+read_file -format sverilog {
+    A2D_Intf.sv
+    Auth_blk.sv
+    PID.sv
+    Segway_Math.sv
+    balance_cntrl.sv
+    inert_intf.sv
+    inertial_integrator.sv
+    mtr_drv.sv
+    piezo_drv.sv
+    PWM11.sv
+    rst_synch.sv
+    steer_en.sv
+    steer_en_SM_shell.sv
+    SPI.sv
+    UART_tx.svso
+    Segway.sv
+}
+current_design Segway
+
+analyze -format sverilog {
+    A2D_Intf.sv
+    Auth_blk.sv
+    PID.sv
+    Segway_Math.sv
+    balance_cntrl.sv
+    inert_intf.sv
+    inertial_integrator.sv
+    mtr_drv.sv
+    piezo_drv.sv
+    PWM11.sv
+    rst_synch.sv
+    steer_en.sv
+    steer_en_SM_shell.sv
+    SPI.sv
+    UART_tx.sv
+    Segway.sv
+}
+elaborate Segway
+link
+
+check_design 
+
+# ====================================================================
+# Constraints from spec
+# ====================================================================
+
+# 333 MHz clock (3.0 ns period)
+create_clock -name clk -period 3.0 [get_ports clk]
+
+# 400 MHz clock
+# create_clock -name clk -period 2.5 [get_ports clk]
+
+# Don’t touch the clock network
+set_dont_touch_network [get_ports clk]
+set_dont_touch_network [find port clk]
+set_dont_touch_network [get_clocks clk]
+
+# Clock uncertainty 0.15 ns
+set_clock_uncertainty 0.15 [get_clocks clk]
+
+# Primary inputs (exclude clk)
+set prim_in [remove_from_collection [all_inputs] [get_ports clk]]
+
+# Input delay: 0.25 ns after clk for all inputs
+set_input_delay -clock clk 0.25 $prim_in
+
+# Drive strength of inputs:
+#   model as NAND2X2_RVT from saed32rvt_tt0p85v25c,
+#   except for rst_n which gets explicit drive.
+set data_in [remove_from_collection $prim_in [get_ports rst_n]]
+set_driving_cell -lib_cell NAND2X2_RVT -library saed32rvt_tt0p85v25c $data_in
+
+# Weak driver on reset (units are MW)
+set_drive 0.0001 [get_ports rst_n]
+
+# Output delay: 0.35 ns prior to next clk rise for all outputs
+set_output_delay -clock clk 0.35 [all_outputs]
+
+# Output load: 50 fF = 0.05 pF (library unit is pF)
+set_load 0.05 [all_outputs]
+
+# Wireload model: 16000 sq. microns
+set_wire_load_model -name 16000 -library saed32rvt_tt0p85v25c
+
+# Max transition time: 0.10 ns
+set_max_transition 0.10 [current_design]
+
+# ====================================================================
+# Multi-cycle path constraints
+# ====================================================================
+
+# iNEMO pitch and AZ regs
+set_multicycle_path 2 -setup -from [find pin iNEMO/ptch_*_reg*/CLK]
+set_multicycle_path 2 -setup -from [find pin iNEMO/AZ*_reg*/CLK]
+set_multicycle_path 2 -hold  -from [find pin iNEMO/ptch_*_reg*/CLK]
+set_multicycle_path 2 -hold  -from [find pin iNEMO/AZ*_reg*/CLK]
+
+# Soft-start timer in iBAL/iCNTRL
+set_multicycle_path 2 -setup -from [find pin iBAL/iCNTRL/ss_tmr_reg*/CLK]
+set_multicycle_path 2 -hold  -from [find pin iBAL/iCNTRL/ss_tmr_reg*/CLK]
+
+# ====================================================================
+# Compile & flatten
+# ====================================================================
+
+compile -map_effort medium
+ungroup -all -flatten
+compile -map_effort medium
+
+# ====================================================================
+# Reports
+# ====================================================================
+
+report_timing -delay_type min  > segway_timing_min.rpt
+report_timing -delay_type max  > segway_timing_max.rpt
+report_area                    > segway_area.rpt
+report_power                   > segway_power.rpt
+report_qor                     > segway_qor.rpt
+
+# ====================================================================
+# Write netlist & SDC
+# ====================================================================
+
+write -format verilog -hierarchy -output Segway.vg
+write_sdc Segway.sdc
+
+# ====== Basic reports ======
+report_timing -delay min
+report_timing -delay max
+report_area
+
+
+echo "===== Segway synthesis completed successfully ====="
+
+
+report_timing -delay max -max_paths 5 -sort_by slack -path full

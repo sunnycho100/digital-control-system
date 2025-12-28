@@ -1,0 +1,228 @@
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+****************************************
+Report : area
+Design : Segway
+Version: X-2025.06
+Date   : Wed Dec  3 23:57:18 2025
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    saed32rvt_tt0p85v25c (File: /cae/apps/data/saed32_edk-2022/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db)
+
+Number of ports:                           20
+Number of nets:                          3322
+Number of cells:                         2844
+Number of combinational cells:           2390
+Number of sequential cells:               453
+Number of macros/black boxes:               0
+Number of buf/inv:                        385
+Number of references:                      60
+
+Combinational area:               6274.815353
+Buf/Inv area:                      516.420611
+Noncombinational area:            3129.529289
+Macro/Black Box area:                0.000000
+Net Interconnect area:            1949.511769
+
+Total cell area:                  9404.344642
+Total area:                      11353.856411
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V5 (single pipline)
+
+
+  slack (MET)                                                        0.10
+****************************************
+Report : area
+Design : Segway
+Version: X-2025.06
+Date   : Tue Dec  2 03:00:02 2025
+****************************************
+
+Library(s) Used:
+
+    saed32rvt_tt0p85v25c (File: /cae/apps/data/saed32_edk-2022/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db)
+
+Number of ports:                           20
+Number of nets:                          3300
+Number of cells:                         2731
+Number of combinational cells:           2274
+Number of sequential cells:               456
+Number of macros/black boxes:               0
+Number of buf/inv:                        294
+Number of references:                      51
+
+Combinational area:               6018.892347
+Buf/Inv area:                      398.751938
+Noncombinational area:            3142.744779
+Macro/Black Box area:                0.000000
+Net Interconnect area:            1930.816291
+
+Total cell area:                  9161.637126
+Total area:                      11092.453417
+===== Segway synthesis completed successfully =====
+
+
+
+
+
+
+
+
+
+
+
+
+V4.5 (2nd PP)
+ slack (MET)                                                        0.08
+1
+report_area
+
+****************************************
+Report : area
+Design : Segway
+Version: X-2025.06
+Date   : Tue Dec  2 03:05:36 2025
+****************************************
+
+Library(s) Used:
+
+    saed32rvt_tt0p85v25c (File: /cae/apps/data/saed32_edk-2022/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db)
+
+Number of ports:                           20
+Number of nets:                          3307
+Number of cells:                         2740
+Number of combinational cells:           2270
+Number of sequential cells:               469
+Number of macros/black boxes:               0
+Number of buf/inv:                        296
+Number of references:                      51
+
+Combinational area:               6004.914427
+Buf/Inv area:                      398.497794
+Noncombinational area:            3235.253197
+Macro/Black Box area:                0.000000
+Net Interconnect area:            1941.730571
+
+Total cell area:                  9240.167624
+Total area:                      11181.898195
+1
+echo "===== Segway synthesis completed successfully ====="
+===== Segway synthesis completed successfully =====
+report_timing -delay max -max_paths 5 -sort_by slack -path full
+
+
+
+
+target to beat TODO 11900
+
+
+
+
+
+
+
+
+

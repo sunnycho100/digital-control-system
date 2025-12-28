@@ -1,0 +1,114 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Segway
+Version: X-2025.06
+Date   : Fri Dec  5 23:29:13 2025
+****************************************
+
+Operating Conditions: tt0p85v25c   Library: saed32rvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: iNEMO/ptch_rt_l_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: iBAL/segway_math_inst/PID_ss_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Segway             16000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.10       0.10
+  iNEMO/ptch_rt_l_reg[4]/CLK (DFFX1_RVT)                  0.00       0.10 r
+  iNEMO/ptch_rt_l_reg[4]/Q (DFFX1_RVT)                    0.14       0.24 f
+  U3944/Y (OR4X1_RVT)                                     0.15       0.39 f
+  U3406/Y (OR2X1_RVT)                                     0.06       0.45 f
+  U3404/Y (NAND4X0_RVT)                                   0.05       0.50 r
+  U3403/Y (NAND4X0_RVT)                                   0.07       0.57 f
+  U4093/Y (NAND2X2_RVT)                                   0.12       0.69 r
+  U3622/Y (NAND2X1_RVT)                                   0.12       0.81 f
+  U3938/Y (XOR2X1_RVT)                                    0.16       0.97 r
+  iBAL/pid_inst/add_1_root_add_0_root_add_151_2/U1_1/CO (FADDX1_RVT)
+                                                          0.13       1.10 r
+  iBAL/pid_inst/add_1_root_add_0_root_add_151_2/U1_2/CO (FADDX1_RVT)
+                                                          0.12       1.21 r
+  iBAL/pid_inst/add_1_root_add_0_root_add_151_2/U1_3/CO (FADDX1_RVT)
+                                                          0.12       1.33 r
+  iBAL/pid_inst/add_1_root_add_0_root_add_151_2/U1_4/CO (FADDX1_RVT)
+                                                          0.12       1.45 r
+  iBAL/pid_inst/add_1_root_add_0_root_add_151_2/U1_5/CO (FADDX1_RVT)
+                                                          0.12       1.56 r
+  iBAL/pid_inst/add_1_root_add_0_root_add_151_2/U1_6/CO (FADDX1_RVT)
+                                                          0.12       1.68 r
+  iBAL/pid_inst/add_1_root_add_0_root_add_151_2/U1_7/CO (FADDX1_RVT)
+                                                          0.12       1.79 r
+  iBAL/pid_inst/add_1_root_add_0_root_add_151_2/U1_8/CO (FADDX1_RVT)
+                                                          0.12       1.91 r
+  iBAL/pid_inst/add_1_root_add_0_root_add_151_2/U1_9/CO (FADDX1_RVT)
+                                                          0.12       2.03 r
+  iBAL/pid_inst/add_1_root_add_0_root_add_151_2/U1_10/CO (FADDX1_RVT)
+                                                          0.12       2.14 r
+  iBAL/pid_inst/add_1_root_add_0_root_add_151_2/U1_11/CO (FADDX1_RVT)
+                                                          0.12       2.26 r
+  iBAL/pid_inst/add_1_root_add_0_root_add_151_2/U1_12/CO (FADDX1_RVT)
+                                                          0.12       2.38 r
+  iBAL/pid_inst/add_1_root_add_0_root_add_151_2/U1_13/CO (FADDX1_RVT)
+                                                          0.12       2.49 r
+  iBAL/pid_inst/add_1_root_add_0_root_add_151_2/U1_14/CO (FADDX1_RVT)
+                                                          0.12       2.61 r
+  iBAL/pid_inst/add_1_root_add_0_root_add_151_2/U1_15/S (FADDX1_RVT)
+                                                          0.17       2.78 f
+  iBAL/pid_inst/add_0_root_add_0_root_add_151_2/U1_15/S (FADDX1_RVT)
+                                                          0.20       2.98 r
+  U3761/Y (INVX1_RVT)                                     0.08       3.06 f
+  U3681/Y (AND2X1_RVT)                                    0.11       3.17 f
+  U3234/Y (AO21X1_RVT)                                    0.10       3.27 f
+  U3233/Y (AND2X1_RVT)                                    0.09       3.36 f
+  U3939/Y (XNOR2X1_RVT)                                   0.13       3.50 r
+  iBAL/segway_math_inst/mult_24/S2_2_9/S (FADDX1_RVT)     0.16       3.66 f
+  iBAL/segway_math_inst/mult_24/S2_3_8/S (FADDX1_RVT)     0.17       3.83 r
+  iBAL/segway_math_inst/mult_24/S2_4_7/S (FADDX1_RVT)     0.16       4.00 f
+  iBAL/segway_math_inst/mult_24/S2_5_6/S (FADDX1_RVT)     0.17       4.17 r
+  iBAL/segway_math_inst/mult_24/S2_6_5/S (FADDX1_RVT)     0.16       4.33 f
+  iBAL/segway_math_inst/mult_24/S2_7_4/S (FADDX1_RVT)     0.17       4.50 r
+  U3762/Y (XOR2X1_RVT)                                    0.14       4.64 f
+  iBAL/segway_math_inst/mult_24/S14_11_0/S (FADDX1_RVT)
+                                                          0.17       4.81 r
+  U3294/Y (OR2X1_RVT)                                     0.07       4.88 r
+  U3632/Y (INVX1_RVT)                                     0.03       4.91 f
+  U3285/Y (OA21X1_RVT)                                    0.08       4.99 f
+  U3280/Y (OA21X1_RVT)                                    0.08       5.07 f
+  U3275/Y (OA21X1_RVT)                                    0.08       5.16 f
+  U3270/Y (OA21X1_RVT)                                    0.08       5.24 f
+  U3265/Y (OA21X1_RVT)                                    0.08       5.32 f
+  U3260/Y (OA21X1_RVT)                                    0.08       5.41 f
+  U3254/Y (OA21X1_RVT)                                    0.08       5.49 f
+  U3942/Y (OA221X1_RVT)                                   0.10       5.58 f
+  U3941/Y (XNOR2X1_RVT)                                   0.12       5.71 r
+  iBAL/segway_math_inst/PID_ss_reg[11]/D (DFFARX1_RVT)
+                                                          0.01       5.72 r
+  data arrival time                                                  5.72
+
+  clock clk (rise edge)                                   6.00       6.00
+  clock network delay (propagated)                        0.10       6.10
+  clock uncertainty                                      -0.15       5.95
+  iBAL/segway_math_inst/PID_ss_reg[11]/CLK (DFFARX1_RVT)
+                                                          0.00       5.95 r
+  library setup time                                     -0.06       5.90
+  data required time                                                 5.90
+  --------------------------------------------------------------------------
+  data required time                                                 5.90
+  data arrival time                                                 -5.72
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+1

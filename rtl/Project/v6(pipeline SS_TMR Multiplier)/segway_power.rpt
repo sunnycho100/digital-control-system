@@ -1,0 +1,61 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : Segway
+Version: X-2025.06
+Date   : Tue Dec  2 16:54:40 2025
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_tt0p85v25c (File: /cae/apps/data/saed32_edk-2022/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db)
+
+
+Operating Conditions: tt0p85v25c   Library: saed32rvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+Segway                 16000             saed32rvt_tt0p85v25c
+
+
+Global Operating Voltage = 0.85 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 696.3584 uW   (98%)
+  Net Switching Power  =  12.3996 uW    (2%)
+                         ---------
+Total Dynamic Power    = 708.7579 uW  (100%)
+
+Cell Leakage Power     = 214.1752 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network    668.1507            0.0000            0.0000          668.1507  (  72.39%)  i
+register          14.5796            4.0493        1.0884e+08          127.4727  (  13.81%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational     13.6277            8.3503        1.0533e+08          127.3090  (  13.79%)
+--------------------------------------------------------------------------------------------------
+Total            696.3580 uW        12.3996 uW     2.1418e+08 pW       922.9324 uW
+1

@@ -1,0 +1,47 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : Segway
+Version: X-2025.06
+Date   : Tue Dec  2 16:54:39 2025
+****************************************
+
+Operating Conditions: tt0p85v25c   Library: saed32rvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: iDRV/iPWM_rght/cnt_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: iDRV/iPWM_rght/cnt_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Segway             16000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.08       0.08
+  iDRV/iPWM_rght/cnt_reg[0]/CLK (DFFARX1_RVT)             0.00       0.08 r
+  iDRV/iPWM_rght/cnt_reg[0]/QN (DFFARX1_RVT)              0.09       0.17 f
+  iDRV/iPWM_rght/cnt_reg[0]/D (DFFARX1_RVT)               0.01       0.18 f
+  data arrival time                                                  0.18
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.08       0.08
+  clock uncertainty                                       0.15       0.23
+  iDRV/iPWM_rght/cnt_reg[0]/CLK (DFFARX1_RVT)             0.00       0.23 r
+  library hold time                                      -0.02       0.21
+  data required time                                                 0.21
+  --------------------------------------------------------------------------
+  data required time                                                 0.21
+  data arrival time                                                 -0.18
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+

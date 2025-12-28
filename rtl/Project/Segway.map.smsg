@@ -1,0 +1,7 @@
+Info (10281): Verilog HDL Declaration information at piezo_drv.sv(337): object "IDLE" differs only in case from object "idle" in the same scope File: //Mac/Home/Downloads/segway_hoverboard/rtl/Project/piezo_drv.sv Line: 337
+Info (10281): Verilog HDL Declaration information at rst_synch.v(7): object "RST_n" differs only in case from object "rst_n" in the same scope File: //Mac/Home/Downloads/segway_hoverboard/rtl/Project/rst_synch.v Line: 7
+Info (10281): Verilog HDL Declaration information at Segway.sv(6): object "RST_n" differs only in case from object "rst_n" in the same scope File: //Mac/Home/Downloads/segway_hoverboard/rtl/Project/Segway.sv Line: 6
+Info (10281): Verilog HDL Declaration information at inert_intf.sv(20): object "AZl" differs only in case from object "AZL" in the same scope File: //Mac/Home/Downloads/segway_hoverboard/rtl/Project/inert_intf.sv Line: 20
+Info (10281): Verilog HDL Declaration information at inert_intf.sv(20): object "AZh" differs only in case from object "AZH" in the same scope File: //Mac/Home/Downloads/segway_hoverboard/rtl/Project/inert_intf.sv Line: 20
+Info (10281): Verilog HDL Declaration information at A2D_intf.sv(58): object "channel" differs only in case from object "CHANNEL" in the same scope File: //Mac/Home/Downloads/segway_hoverboard/rtl/Project/A2D_intf.sv Line: 58
+Info (10281): Verilog HDL Declaration information at spi_mnrch.sv(42): object "shift" differs only in case from object "SHIFT" in the same scope File: //Mac/Home/Downloads/segway_hoverboard/rtl/Project/spi_mnrch.sv Line: 42

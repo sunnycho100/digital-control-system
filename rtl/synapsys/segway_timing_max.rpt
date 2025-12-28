@@ -1,0 +1,108 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Segway
+Version: X-2025.06
+Date   : Tue Dec  2 03:09:00 2025
+****************************************
+
+Operating Conditions: tt0p85v25c   Library: saed32rvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: iNEMO/AZl_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: iNEMO/iINT/ptch_int_reg[26]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Segway             16000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.10       0.10
+  iNEMO/AZl_reg[1]/CLK (DFFX1_RVT)                        0.00       0.10 r
+  iNEMO/AZl_reg[1]/Q (DFFX1_RVT)                          0.16       0.26 r
+  U760/Y (AND2X1_RVT)                                     0.10       0.36 r
+  iNEMO/iINT/mult_47/S2_2_1/CO (FADDX1_RVT)               0.14       0.50 r
+  iNEMO/iINT/mult_47/S2_3_1/CO (FADDX1_RVT)               0.13       0.63 r
+  iNEMO/iINT/mult_47/S2_4_1/CO (FADDX1_RVT)               0.13       0.77 r
+  iNEMO/iINT/mult_47/S2_5_1/CO (FADDX1_RVT)               0.13       0.90 r
+  iNEMO/iINT/mult_47/S2_6_1/CO (FADDX1_RVT)               0.13       1.04 r
+  iNEMO/iINT/mult_47/S2_7_1/CO (FADDX1_RVT)               0.13       1.17 r
+  iNEMO/iINT/mult_47/S2_8_1/CO (FADDX1_RVT)               0.13       1.31 r
+  iNEMO/iINT/mult_47/S2_9_1/CO (FADDX1_RVT)               0.13       1.44 r
+  iNEMO/iINT/mult_47/S2_10_1/CO (FADDX1_RVT)              0.12       1.56 r
+  iNEMO/iINT/mult_47/S2_11_1/CO (FADDX1_RVT)              0.13       1.69 r
+  iNEMO/iINT/mult_47/S2_12_1/CO (FADDX1_RVT)              0.13       1.83 r
+  iNEMO/iINT/mult_47/S2_13_1/CO (FADDX1_RVT)              0.13       1.96 r
+  iNEMO/iINT/mult_47/S2_14_1/CO (FADDX1_RVT)              0.13       2.09 r
+  U1923/Y (XOR2X1_RVT)                                    0.14       2.24 f
+  U1912/Y (XOR2X1_RVT)                                    0.15       2.38 r
+  U812/Y (NAND3X0_RVT)                                    0.09       2.47 f
+  U808/Y (OA21X1_RVT)                                     0.12       2.59 f
+  U804/Y (OA21X1_RVT)                                     0.09       2.69 f
+  U802/Y (OA21X1_RVT)                                     0.08       2.77 f
+  U798/Y (OA21X1_RVT)                                     0.09       2.86 f
+  U796/Y (OA21X1_RVT)                                     0.07       2.94 f
+  U794/Y (NAND2X0_RVT)                                    0.06       3.00 r
+  U2238/Y (XOR2X1_RVT)                                    0.14       3.13 f
+  U775/Y (AO221X1_RVT)                                    0.10       3.24 f
+  U774/Y (OA221X1_RVT)                                    0.07       3.31 f
+  U773/Y (AO221X1_RVT)                                    0.07       3.38 f
+  U772/Y (OA221X1_RVT)                                    0.07       3.46 f
+  U771/Y (AO21X1_RVT)                                     0.06       3.52 f
+  U770/Y (AO21X1_RVT)                                     0.08       3.60 f
+  U769/Y (AO22X1_RVT)                                     0.06       3.66 f
+  U767/Y (AO22X1_RVT)                                     0.08       3.74 f
+  U2083/Y (IBUFFX8_RVT)                                   0.12       3.86 r
+  iNEMO/iINT/add_0_root_sub_0_root_add_72/U1_11/CO (FADDX1_RVT)
+                                                          0.19       4.04 r
+  iNEMO/iINT/add_0_root_sub_0_root_add_72/U1_12/CO (FADDX1_RVT)
+                                                          0.12       4.16 r
+  iNEMO/iINT/add_0_root_sub_0_root_add_72/U1_13/CO (FADDX1_RVT)
+                                                          0.12       4.28 r
+  U765/Y (AO22X1_RVT)                                     0.09       4.36 r
+  U764/Y (OR2X1_RVT)                                      0.07       4.43 r
+  U763/Y (AO22X1_RVT)                                     0.08       4.51 r
+  iNEMO/iINT/U31/CO (FADDX1_RVT)                          0.11       4.62 r
+  iNEMO/iINT/U45/CO (FADDX1_RVT)                          0.12       4.74 r
+  U761/Y (AO22X1_RVT)                                     0.08       4.82 r
+  iNEMO/iINT/U46/CO (FADDX1_RVT)                          0.11       4.93 r
+  iNEMO/iINT/add_0_root_sub_0_root_add_72/U1_20/CO (FADDX1_RVT)
+                                                          0.12       5.05 r
+  iNEMO/iINT/add_0_root_sub_0_root_add_72/U1_21/CO (FADDX1_RVT)
+                                                          0.12       5.17 r
+  iNEMO/iINT/add_0_root_sub_0_root_add_72/U1_22/CO (FADDX1_RVT)
+                                                          0.12       5.28 r
+  iNEMO/iINT/add_0_root_sub_0_root_add_72/U1_23/CO (FADDX1_RVT)
+                                                          0.12       5.40 r
+  iNEMO/iINT/add_0_root_sub_0_root_add_72/U1_24/CO (FADDX1_RVT)
+                                                          0.12       5.51 r
+  iNEMO/iINT/add_0_root_sub_0_root_add_72/U1_25/CO (FADDX1_RVT)
+                                                          0.12       5.63 r
+  iNEMO/iINT/U36/Y (XOR3X1_RVT)                           0.09       5.72 f
+  U735/Y (AO22X1_RVT)                                     0.07       5.78 f
+  iNEMO/iINT/ptch_int_reg[26]/D (DFFARX1_RVT)             0.01       5.80 f
+  data arrival time                                                  5.80
+
+  clock clk (rise edge)                                   6.00       6.00
+  clock network delay (propagated)                        0.11       6.11
+  clock uncertainty                                      -0.15       5.96
+  iNEMO/iINT/ptch_int_reg[26]/CLK (DFFARX1_RVT)           0.00       5.96 r
+  library setup time                                     -0.05       5.90
+  data required time                                                 5.90
+  --------------------------------------------------------------------------
+  data required time                                                 5.90
+  data arrival time                                                 -5.80
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.10
+
+
+1

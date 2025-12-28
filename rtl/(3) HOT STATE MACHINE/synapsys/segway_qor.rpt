@@ -1,0 +1,83 @@
+ 
+****************************************
+Report : qor
+Design : Segway
+Version: X-2025.06
+Date   : Fri Dec  5 23:29:14 2025
+****************************************
+
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:              47.00
+  Critical Path Length:          5.61
+  Critical Path Slack:           0.18
+  Critical Path Clk Period:      3.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          0
+  Hierarchical Port Count:          0
+  Leaf Cell Count:               2645
+  Buf/Inv Cell Count:             285
+  Buf Cell Count:                  13
+  Inv Cell Count:                 272
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:      2198
+  Sequential Cell Count:          447
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:     5866.151797
+  Noncombinational Area:  3088.866248
+  Buf/Inv Area:            377.912130
+  Total Buffer Area:            26.43
+  Total Inverter Area:         351.48
+  Macro/Black Box Area:      0.000000
+  Net Area:               1890.094973
+  -----------------------------------
+  Cell Area:              8955.018045
+  Design Area:           10845.113018
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          3171
+  Nets With Violations:             9
+  Max Trans Violations:             9
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: tux-110
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.13
+  Logic Optimization:                  0.57
+  Mapping Optimization:                1.29
+  -----------------------------------------
+  Overall Compile Time:                2.65
+  Overall Compile Wall Clock Time:     3.05
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1
