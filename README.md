@@ -1,6 +1,6 @@
-# 🧠 Segway Hoverboard Controller — SystemVerilog Project
+# 🧠 Segway Control System — SystemVerilog Project
 
-This repository contains all design, simulation, and synthesis files for our **Segway Hoverboard Controller** project.  
+This repository contains all design, simulation, and synthesis files for our **Segway Control System** project.  
 Each folder has a specific purpose to keep development organized across phases.
 
 ---
